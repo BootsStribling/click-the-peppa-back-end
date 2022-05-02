@@ -1,4 +1,5 @@
 import { Router } from 'express'
+import * as peppasCtrl from '../controllers/peppas.js'
 
 const router = Router()
 
