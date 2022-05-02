@@ -5,6 +5,7 @@ import cors from 'cors'
 
 
 import('./config/database.js')
+import { router as peppasRouter} from './routes/peppas.js'
 
 const app = express()
 
@@ -13,6 +14,8 @@ app.use(logger('dev'))
 app.use(express.json())
 
 // Routes go here
+app.use('/', peppasRouter)
+
 
 app.use(function (req, res, next) {
   res.status(404).json({ err: "Not found" })
