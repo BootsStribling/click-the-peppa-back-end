@@ -20,6 +20,20 @@ const index = (req, res) => {
 //   })
 // }
 
+const update = (req,res) => {
+  Peppa.findById({_id:'626ff7de637f2b47b9c85061'})
+  .then(peppa => {
+    console.log(peppa, 'before ++');
+    peppa['count'] += 1
+    peppa.save()
+    .then(peppa => res.status(202).json(peppa))
+    .catch(err => res.status(500).json(err))
+  })
+  .catch(err => res.status(500).json(err))
+}
+
 export {
   index,
+  //create,
+  update,
 }

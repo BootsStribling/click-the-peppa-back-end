@@ -9,6 +9,7 @@ router.get('/', peppasCtrl.index)
 //localhost:3000/
 //**** UNCOMMENT THIS OUT TO CREATE A NEW PEPPA */
 // router.post('/', peppasCtrl.create)
+router.put('/', peppasCtrl.update)
 
 
 export{router}
